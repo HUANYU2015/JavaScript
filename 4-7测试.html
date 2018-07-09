@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>location对象</title>
+    <!--要求：
+         (1当点击页面上的按钮时，弹出输入框
+
+        （2当点击输入框上的确定时，弹出慕课网的网站
+
+        （3当点击输入框上的取消时，没有任何变化
+
+      Tips：慕课网URL：http://www.imooc.com-->
+</head>
+<body>
+<button onclick="a()">打开网页</button>
+
+</body>
+<script type="text/javascript">
+    //补充代码
+    function a() {
+        var url = prompt("请输入您想要打开网页的网址全称：");
+        //可用的屏幕宽度和高度
+        var width = window.screen.availWidth;
+        var height = window.screen.availHeight;
+
+        //当前窗口文档显示宽度和高度
+        //var width = window.innerWidth;
+        // var height = window.innerHeight;
+        window.open(url, '百度', 'width='+width+', '+'height='+height);
+    }
+
+</script>
+</html>

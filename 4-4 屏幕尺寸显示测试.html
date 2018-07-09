@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>screen</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<button onclick="a()">当前屏幕可用宽度</button>
+<button onclick="b()">当前显示屏幕高度</button>
+<button onclick="c()">当前窗口文档显示宽度</button>
+<button onclick="d()">当前窗口文档显示高度</button>
+</body>
+<script type="text/javascript">
+    //补充代码
+    function a() {
+        alert("当前屏幕可用宽度为"+window.screen.availWidth);
+    }
+
+    function b() {
+        alert("当前屏幕可用高度为"+window.screen.availHeight);
+    }
+
+    function c() {
+        alert("当前窗口文档显示宽度为"+window.innerWidth);
+    }
+
+    function d() {
+        alert("当前窗口文档显示高度为"+window.innerHeight);
+    }
+
+</script>
+</html>

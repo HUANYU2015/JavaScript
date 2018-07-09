@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var str = "IMOOC521";
+    var num = parseInt(str);
+    // console.log(num);//out NaN
+    if (num == NaN) {
+        console.log("num == NaN 为true！");
+        alert(NaN);
+    }
+    else if (num == 521) {
+        console.log("num == 521 为true！");
+        alert(521);
+    }
+    else if (typeof num == "number") {
+        // typeof num == "number"（变量类型是否一致）为true
+        console.log("typeof num == \"number\"为true！");
+        alert("number");
+    }
+    else {
+        alert("str");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM节点</title>
+
+    <!--
+        document.createElement("p")
+        document.createTextNode("新增")
+        parent.appendChild(child);
+        parent.removeChild(child);
+        parent.replaceChild(newChild, oldChild);
+    -->
+</head>
+<body>
+<div id="div1">
+    <p id="p1">我是p标签1的内容</p>
+    <p id="p2">我是p标签2的内容</p>
+</div>
+<script type="text/javascript">
+    //1.添加标签
+
+    //添加一个p标签
+    var p = document.createElement("p");
+    //编写一个元素的值
+    var word = document.createTextNode("我是新增的p标签的内容");
+    //将上面的新增的标签和值匹配在一起
+    p.appendChild(word);
+    //将新增的含值标签添加到指定位置
+    var div1 = document.getElementById("div1");
+    div1.appendChild(p);
+
+
+    //2.删除已有标签，此例删除p标签1
+    var p1 = document.getElementById("p1");
+    div1.removeChild(p1);
+
+
+    //3.替换标签，此例使用p标签替换p2标签
+    var p2 = document.getElementById("p2");
+    div1.replaceChild(p, p2);
+
+</script>
+</body>
+</html>

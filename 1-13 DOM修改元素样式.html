@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM修改元素样式</title>
+    <!--在script中修改元素的样式（style）-->
+    <style>
+        div {
+            font-size: 25px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="main">helloWorld</div>
+<script type="text/javascript">
+    //获得需要修改style的元素
+    var main = document.getElementById("main");
+
+    //修改style
+    main.style.color = "green";
+    main.style.fontSize = "50px";
+</script>
+</body>
+</html>

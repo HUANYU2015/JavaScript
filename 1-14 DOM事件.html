@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM事件</title>
+    <!--
+    DOM事件是哪要素：
+            1.元素
+            2.动作
+            3.触发的结果
+
+    动作及触发类型：
+      1）事件内嵌到元素中，动作为点击触发
+      2）通过JavaScript添加事件，动作为点击触发
+      3）通过JavaScript添加事件，动作为点击触发，使用addEventListener
+    -->
+</head>
+<body>
+<!--1）事件内嵌到元素中，动作为点击触发-->
+<div onclick="alert('我是周芷若。')">你是谁？</div>
+
+<div id="main">你是谁？</div>
+
+<div id="btn">周姐姐，你喜欢张无忌吗？</div>
+<script type="text/javascript">
+    //2）通过JavaScript添加事件，动作为点击触发
+    var main = document.getElementById("main");
+    main.onclick = function () {
+        alert("我是仰慕你的人？");
+    };
+
+    //3）通过JavaScript添加事件，动作为点击触发，使用addEventListener
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click", function () {
+        alert("我、、、，我不知道！");
+    });
+
+</script>
+</body>
+</html>

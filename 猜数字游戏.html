@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>猜数字</title>
+</head>
+<body>
+<script>
+    //补充代码
+    var temp = prompt("请输入您猜的数字(1~10)：");
+
+    // 将temp转换为number类型
+    var guess = parseInt(temp);
+    if(guess == 5) {
+        alert("猜对了")
+    }
+    else {
+        if(guess < 5 && guess >= 1) {
+            alert("猜小了");
+
+        }
+        else if(guess > 5 && guess <= 10) {
+            alert("猜大了");
+
+        }
+        else {alert("请输入1~10范围的整数！");}
+    }
+    // 如何实现循环输入？
+</script>
+</body>
+</html>

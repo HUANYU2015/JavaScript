@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom简介</title>
+</head>
+<body>
+<!--在script中获得HTML文档中的元素-->
+<div id="intro">通过getElementById和id获得的内容</div>
+<div id="main">
+    <p>通过id和其下的标签名找HTML，这是第一个标签中的内容</p>
+</div>
+<div class="content">1</div>
+<div class="content">2</div>
+<div class="content">3</div>
+<div class="content">4</div>
+<script type="text/javascript">
+    <!--通过js获取HTML标签-->
+
+    //通过id找HTML
+    var intro = document.getElementById(intro);
+
+    //通过id和其下的标签名找HTML
+    var main = document.getElementById("main");
+    var p = main.getElementsByTagName("p")[0];
+
+    //通过class名称找HTML
+    var content1 = document.getElementsByClassName("content")[1];
+</script>
+
+</body>
+</html>

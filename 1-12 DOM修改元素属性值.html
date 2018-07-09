@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM修改元素属性值</title>
+    <!--在script中修改HTML元素的值或者内容
+           element.getAttribute(),//获得元素属性值
+           element.setAttribute(),//修改元素属性值
+           element.src,//替换resource的位置，进而修改资源
+           element.href,//替换连接地址
+    -->
+</head>
+<body>
+<div id="main" data="你好，周芷若">123</div>
+<img src="芷若_1.png" id="image">
+<a href="https://www.baidu.com/" id="goURL">跳转到百度网页</a>
+<script type="text/javascript">
+    var main = document.getElementById("main");
+
+    //innerHTML将值写到HTML元素中，在这里，即就是替换“123”
+    main.innerHTML = "helloWorld";
+
+    //获得div元素的data属性值，并在弹出框中显示
+    alert(main.getAttribute("data"));
+
+    //修改元素属性
+    main.setAttribute("data", "你好，周芷若，你是美女子！");
+
+    //添加元素属性
+    main.setAttribute("dd", "beautiful");
+
+    //替换resource的位置，进而修改资源，还可以通过setAttribute()方法来实现
+    var image = document.getElementById("image");
+    image.src = "芷若_2.jpg";
+
+    //替换连接地址，还可以通过setAttribute()方法来实现
+    var ahref = document.getElementById("goURL");
+    ahref.href = "http://www.mybatis.org/mybatis-3/zh/getting-started.html";
+</script>
+</body>
+</html>

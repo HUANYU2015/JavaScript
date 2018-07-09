@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS windows操作之窗口操作</title>
+    <!--
+        window的概念
+        1.所有浏览器都支持window对象，它表示浏览器窗口。
+        2.所有的JavaScript全局对象、函数以及变量均自动成为window对象的成员，
+        即就是，全局变量是window对象的属性，
+        全局函数是window对象的方法。
+
+        window的用法：
+        window.open()-打开窗口
+        window.close()-关闭当前窗口
+        window.moveTo()-移动当前窗口
+        window.resizeTo()-调整当前窗口尺寸
+    -->
+</head>
+<body>
+<button onclick="openwindow()">创建窗口</button>
+<button onclick="myFunction()">调整窗口</button>
+<button onclick="moveFunction()">移动窗口</button>
+<button onclick="closeFunction()">关闭窗口</button>
+<script type="text/javascript">
+    // var a = 1;
+    // alert(window.a);
+    var w;
+    function openwindow() {
+        // w = window.open('http://www.baidu.com', '百度', 'width=300, height=300');
+        w = window.open('', '百度', 'width=300, height=300');
+        w.resizeTo(500,500);
+        w.focus();
+    }
+
+    //todo 要想改变w所指向窗口的大小，需保证open函数第一个参数的URL为空,否则直接将下面两句写入openwindow()方法之中，且直接显示调整尺寸后的窗口
+    function myFunction(){
+        w.resizeTo(500,500);
+        w.focus();
+    }
+
+    function moveFunction() {
+        //moveTo(-x, -y)
+        w.moveTo(700, 500);
+        w.focus();
+    }
+
+    function closeFunction() {
+        w.close();
+        w.focus();
+    }
+</script>
+
+</body>
+</html>
